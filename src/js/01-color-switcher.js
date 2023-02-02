@@ -10,7 +10,6 @@ let timerId = null;
 
 const backgroundColorSwitcher = function () {
   body.style.backgroundColor = getRandomHexColor();
-  body.style.color = getRandomHexColor();
 };
 
 startBtn.addEventListener('click', () => {

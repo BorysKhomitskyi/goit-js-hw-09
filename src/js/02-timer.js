@@ -4,10 +4,10 @@ import Notiflix from 'notiflix';
 
 const startBtn = document.querySelector('button[data-start]');
 const dateChosen = document.querySelector('#datetime-picker');
-const day = document.querySelector('[data-days]');
-const hour = document.querySelector('[data-hours]');
-const minute = document.querySelector('[data-minutes]');
-const second = document.querySelector('[data-seconds]');
+const d = document.querySelector('[data-days]');
+const h = document.querySelector('[data-hours]');
+const m = document.querySelector('[data-minutes]');
+const s = document.querySelector('[data-seconds]');
 
 let choosenTime = null;
 
@@ -37,10 +37,10 @@ const options = {
 
           const { days, hours, minutes, seconds } = convertMs(timeLeft);
 
-          day.innerHTML = days < 10 ? addLeadingZero(days) : days;
-          hour.innerHTML = hours < 10 ? addLeadingZero(hours) : hours;
-          minute.innerHTML = minutes < 10 ? addLeadingZero(minutes) : minutes;
-          second.innerHTML = seconds < 10 ? addLeadingZero(seconds) : seconds;
+          d.innerHTML = days < 10 ? addLeadingZero(days) : days;
+          h.innerHTML = hours < 10 ? addLeadingZero(hours) : hours;
+          m.innerHTML = minutes < 10 ? addLeadingZero(minutes) : minutes;
+          s.innerHTML = seconds < 10 ? addLeadingZero(seconds) : seconds;
 
           if (timeLeft < 1000) {
             clearInterval(choosenTime);
